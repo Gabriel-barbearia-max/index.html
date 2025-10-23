@@ -1,1026 +1,1026 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<cabeça>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="largura=largura-do-dispositivo, escala-inicial=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbearia Estilo Clássico | Araxá MG</title>
     
     <!-- Meta tags para redes sociais -->
     <meta property="og:title" content="Barbearia Estilo Clássico | Araxá MG">
     <meta property="og:description" content="A melhor barbearia de Araxá e região. Cortes clássicos, barba e cuidados masculinos.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80">
-    <meta propriedade="og:url" conteúdo="https://www.barbeariaestiloclassico.com.br">
-    <meta propriedade="og:type" content="website">
+    <meta property="og:url" content="https://www.barbeariaestiloclassico.com.br">
+    <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Barbearia Estilo Clássico | Araxá MG">
     <meta name="twitter:description" content="A melhor barbearia de Araxá e região.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80">
     
     <!-- Fonte Awesome -->
-    <link rel="folha de estilo" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <estilo>
+    <style>
         /* ESTILO PARA SCROLL SUAVE */
         html {
-            comportamento de rolagem: suave;
+            scroll-behavior: smooth;
         }
         
-        /* Variáveis ​​de núcleos */
-        :raiz {
-            --primário: #111111;
-            --secundário: #2d2d2d;
-            --acento: #c0c0c0;
+        /* Variáveis de cores */
+        :root {
+            --primary: #111111;
+            --secondary: #2d2d2d;
+            --accent: #c0c0c0;
             --accent-hover: #ffffff;
-            --texto: #f8f9fa;
-            --texto silenciado: #adb5bd;
+            --text: #f8f9fa;
+            --text-muted: #adb5bd;
             --card-bg: rgba(45, 45, 45, 0.8);
             --card-border: rgba(255, 255, 255, 0.1);
-            --altura do cabeçalho: 70px;
+            --header-height: 70px;
         }
         
         * {
-            margem: 0;
-            preenchimento: 0;
-            dimensionamento de caixa: caixa de borda;
-            família de fontes: 'Segoe UI', Tahoma, Genebra, Verdana, sans-serif;
-            -webkit-tap-highlight-color: transparente;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
         
-        html, corpo {
-            largura: 100%;
-            altura: 100%;
-            overflow-x: oculto;
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
         }
         
-        corpo {
-            plano de fundo: gradiente linear (135 graus, var (--primário) 0%, var (--secundário) 100%);
-            cor: var(--texto);
-            altura da linha: 1,5;
-            tamanho da fonte: 16px;
-            altura mínima: 100vh;
+        body {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text);
+            line-height: 1.5;
+            font-size: 16px;
+            min-height: 100vh;
         }
         
-        .recipiente {
-            largura: 100%;
-            largura máxima: 1200px;
-            margem: 0 automático;
-            preenchimento: 0 4%;
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 4%;
         }
         
         /* Elementos flutuantes (WhatsApp e voltar ao topo) */
-        .voltar ao topo {
-            posição: fixa;
-            direita: 20px;
-            largura: 55px;
-            altura: 55px;
-            raio da borda: 50%;
-            exibição: flexível;
-            alinhar-itens: centro;
-            justificar-conteúdo: centro;
-            índice z: 1000;
-            transição: todos os 0,3s;
-            caixa-sombra: 0 4px 15px rgba(0,0,0,0.2);
-            inferior: 85px;
-            fundo: var(--accent);
-            cor: var(--primary);
-            tamanho da fonte: 18px;
-            caixa-sombra: 0 4px 15px rgba(192, 192, 192, 0.4);
-            opacidade: 0;
-            visibilidade: oculto;
+        .back-to-top {
+            position: fixed;
+            right: 20px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            bottom: 85px;
+            background: var(--accent);
+            color: var(--primary);
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(192, 192, 192, 0.4);
+            opacity: 0;
+            visibility: hidden;
         }
         
-        .voltar-ao-topo.visível {
-            opacidade: 1;
-            visibilidade: visível;
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
         }
         
-        .voltar ao topo:passar o mouse {
-            transformar: escala(1.1);
-            plano de fundo: var(--accent-hover);
+        .back-to-top:hover {
+            transform: scale(1.1);
+            background: var(--accent-hover);
         }
         
         /* Cabeçalho */
-        cabeçalho {
-            fundo: rgba(17, 17, 17, 0,95);
-            filtro de pano de fundo: desfoque(10px);
-            preenchimento: 12px 0;
-            posição: fixa;
-            largura: 100%;
-            topo: 0;
-            índice z: 1000;
-            caixa-sombra: 0 2px 15px rgba(0, 0, 0, 0.3);
-            altura: var(--header-height);
+        header {
+            background: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+            height: var(--header-height);
         }
         
-        cabeçalho .container {
-            exibição: flexível;
-            justificar-conteúdo: espaço-entre;
-            alinhar-itens: centro;
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        .logotipo {
-            exibição: flexível;
-            alinhar-itens: centro;
-            lacuna: 8px;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .logo-img {
-            largura: 40px;
-            altura: 40px;
-            raio da borda: 50%;
-            borda: 2px sólido var(--accent);
-            exibição: flexível;
-            alinhar-itens: centro;
-            justificar-conteúdo: centro;
-            fundo: var(--accent);
-            cor: var(--primary);
-            tamanho da fonte: 18px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            color: var(--primary);
+            font-size: 18px;
         }
         
-        .logotipo h1 {
-            tamanho da fonte: 20px;
-            espessura da fonte: 700;
-            cor: var(--accent);
+        .logo h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent);
         }
         
         /* Navegação */
-        navegação {
-            exibição: flexível;
-            lacuna: 12px;
-            alinhar-itens: centro;
+        nav {
+            display: flex;
+            gap: 12px;
+            align-items: center;
         }
         
-        navegar a {
-            cor: var(--texto);
-            decoração de texto: nenhuma;
-            espessura da fonte: 500;
-            transição: todos os 0,3s;
-            tamanho da fonte: 14px;
-            preenchimento: 6px 12px;
-            raio da borda: 5px;
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 14px;
+            padding: 6px 12px;
+            border-radius: 5px;
         }
         
         nav a:hover {
-            cor: var(--accent);
-            fundo: rgba(192, 192, 192, 0.1);
+            color: var(--accent);
+            background: rgba(192, 192, 192, 0.1);
         }
         
         /* Menu Móvel */
-        .menu-alternar {
-            exibição: nenhuma;
-            flex-direction: coluna;
-            justificar-conteúdo: espaço-ao-redor;
-            largura: 28px;
-            altura: 22px;
-            fundo: transparente;
-            borda: nenhuma;
-            cursor: ponteiro;
-            preenchimento: 0;
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 28px;
+            height: 22px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
         }
         
         .menu-toggle span {
-            largura: 100%;
-            altura: 2,5px;
-            cor de fundo: var(--accent);
-            raio da borda: 5px;
-            transição: todos os 0,3s;
+            width: 100%;
+            height: 2.5px;
+            background-color: var(--accent);
+            border-radius: 5px;
+            transition: all 0.3s;
         }
         
         /* Seção Hero */
-        .herói {
-            altura mínima: 80vh;
-            exibição: flexível;
-            alinhar-itens: centro;
-            preenchimento: 90px 0 40px;
-            fundo: gradiente linear(rgba(17, 17, 17, 0,85), rgba(45, 45, 45, 0,85)),
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 90px 0 40px;
+            background: linear-gradient(rgba(17, 17, 17, 0.85), rgba(45, 45, 45, 0.85)), 
                         url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80');
-            tamanho-do-fundo: capa;
-            posição de fundo: centro;
-            alinhamento de texto: centro;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
         }
         
-        .conteúdo do herói {
-            largura: 100%;
-            largura máxima: 800px;
-            margem: 0 automático;
-            preenchimento: 0 15px;
+        .hero-content {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
         }
         
-        .conteúdo do herói h2 {
-            tamanho da fonte: clamp(1.8rem, 5vw, 2.5rem);
-            margem inferior: 15px;
-            cor: var(--accent);
-            espessura da fonte: 700;
-            altura da linha: 1,2;
+        .hero-content h2 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 15px;
+            color: var(--accent);
+            font-weight: 700;
+            line-height: 1.2;
         }
         
-        .conteúdo do herói p {
-            tamanho da fonte: clamp(1rem, 2.5vw, 1.1rem);
-            margem inferior: 25px;
-            opacidade: 0,9;
-            cor: var(--text-muted);
+        .hero-content p {
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            margin-bottom: 25px;
+            opacity: 0.9;
+            color: var(--text-muted);
         }
         
-        .botões de herói {
-            exibição: flexível;
-            lacuna: 12px;
-            flex-wrap: envolver;
-            margem: 30px 0 25px;
-            justificar-conteúdo: centro;
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 30px 0 25px;
+            justify-content: center;
         }
         
         .btn {
-            exibição: inline-flex;
-            alinhar-itens: centro;
-            lacuna: 8px;
-            preenchimento: 14px 22px;
-            decoração de texto: nenhuma;
-            raio da borda: 50px;
-            espessura da fonte: 600;
-            transição: todos os 0,3s;
-            caixa-sombra: 0 4px 12px rgba(0,0,0,0.4);
-            borda: nenhuma;
-            cursor: ponteiro;
-            tamanho da fonte: clamp(14px, 3vw, 16px);
-            altura mínima: 44px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 22px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            border: none;
+            cursor: pointer;
+            font-size: clamp(14px, 3vw, 16px);
+            min-height: 44px;
         }
         
-        .btn do whatsapp {
-            fundo: #25D366;
-            cor: branco;
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
         }
         
         .instagram-btn {
-            fundo: gradiente linear(45 graus, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            cor: branco;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
         }
         
-        .localização-btn {
-            fundo: #336a8f;
-            cor: branco;
+        .location-btn {
+            background: #336a8f;
+            color: white;
         }
         
         /* BOTÕES MODIFICADOS */
-        .serviços-herói-btn {
-            fundo: var(--accent);
-            cor: var(--primary);
+        .services-hero-btn {
+            background: var(--accent);
+            color: var(--primary);
         }
         
-        .btn:passe o mouse {
-            transformar: translateY(-3px);
-            caixa-sombra: 0 6px 18px rgba(0,0,0,0.6);
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.6);
         }
         
         /* Características */
-        .características {
-            preenchimento: 40px 0;
-            fundo: var(--primário);
+        .features {
+            padding: 40px 0;
+            background: var(--primary);
         }
         
-        .título-da-seção {
-            alinhamento de texto: centro;
-            tamanho da fonte: clamp(1.6rem, 5vw, 1.8rem);
-            margem inferior: 30px;
-            cor: var(--accent);
-            espessura da fonte: 700;
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.6rem, 5vw, 1.8rem);
+            margin-bottom: 30px;
+            color: var(--accent);
+            font-weight: 700;
         }
         
-        .grade de recursos {
-            exibição: grade;
-            grid-template-columns: repetir(ajuste automático, minmax(min(180px, 100%), 1fr));
-            lacuna: 15px;
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+            gap: 15px;
         }
         
-        .recurso {
-            alinhamento de texto: centro;
-            preenchimento: 20px 15px;
-            fundo: var(--card-bg);
-            raio da borda: 12px;
-            filtro de pano de fundo: desfoque(10px);
-            borda: 1px sólido var(--card-border);
-            transição: transformação 0,3s;
+        .feature {
+            text-align: center;
+            padding: 20px 15px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            transition: transform 0.3s;
         }
         
-        .recurso: pairar {
-            transformar: translateY(-5px);
-            fundo: rgba(192, 192, 192, 0.1);
+        .feature:hover {
+            transform: translateY(-5px);
+            background: rgba(192, 192, 192, 0.1);
         }
         
-        .recurso i {
-            tamanho da fonte: clamp(28px, 8vw, 32px);
-            cor: var(--accent);
-            margem inferior: 12px;
+        .feature i {
+            font-size: clamp(28px, 8vw, 32px);
+            color: var(--accent);
+            margin-bottom: 12px;
         }
         
-        .recurso h4 {
-            margem inferior: 8px;
-            cor: var(--accent);
-            tamanho da fonte: clamp(0.9rem, 3vw, 1rem);
+        .feature h4 {
+            margin-bottom: 8px;
+            color: var(--accent);
+            font-size: clamp(0.9rem, 3vw, 1rem);
         }
         
-        .recurso p {
-            opacidade: 0,9;
-            altura da linha: 1,4;
-            tamanho da fonte: clamp(0,8rem, 2,5vw, 0,85rem);
-            cor: var(--text-muted);
+        .feature p {
+            opacity: 0.9;
+            line-height: 1.4;
+            font-size: clamp(0.8rem, 2.5vw, 0.85rem);
+            color: var(--text-muted);
         }
         
         /* Serviços */
-        .serviços {
-            preenchimento: 40px 0;
-            plano de fundo: gradiente linear (135 graus, var (--secundário) 0%, var (--primário) 100%);
-            alinhamento de texto: centro;
+        .services {
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            text-align: center;
         }
         
-        .serviços-carrossel {
-            posição: relativa;
-            largura máxima: min(850px, 95vw);
-            margem: 0 automático;
-            estouro: oculto;
-            raio da borda: 12px;
-            caixa-sombra: 0 8px 25px rgba(0, 0, 0, 0.3);
-            cursor: agarrar;
+        .services-carousel {
+            position: relative;
+            max-width: min(850px, 95vw);
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            cursor: grab;
         }
         
-        .services-carousel:ativo {
-            cursor: agarrando;
+        .services-carousel:active {
+            cursor: grabbing;
         }
         
-        .carrossel-container {
-            exibição: flexível;
-            transição: transformação 0,5s de facilidade;
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease;
         }
         
-        .carrossel-slide {
-            largura mínima: 100%;
-            exibição: flexível;
-            flex-direction: coluna;
-            alinhar-itens: centro;
-            justificar-conteúdo: centro;
-            fundo: var(--card-bg);
-            preenchimento: 20px;
-            raio da borda: 12px;
-            filtro de pano de fundo: desfoque(10px);
-            borda: 1px sólido var(--card-border);
-            seleção de usuário: nenhum;
+        .carousel-slide {
+            min-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            user-select: none;
         }
         
-        .carrossel-img {
-            largura: 100%;
-            largura máxima: min(450px, 90vw);
-            altura: min(250px, 50vh);
-            plano de fundo: gradiente linear (45 graus, var (--primário), var (--secundário));
-            raio da borda: 10px;
-            exibição: flexível;
-            alinhar-itens: centro;
-            justificar-conteúdo: centro;
-            margem inferior: 12px;
-            estouro: oculto;
-            borda: 2px sólido var(--accent);
-            posição: relativa;
+        .carousel-img {
+            width: 100%;
+            max-width: min(450px, 90vw);
+            height: min(250px, 50vh);
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            overflow: hidden;
+            border: 2px solid var(--accent);
+            position: relative;
         }
         
-        .carrossel-img img {
-            largura: 100%;
-            altura: 100%;
-            ajuste de objeto: capa;
-            transição: transformação 0,5s de facilidade;
+        .carousel-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
         }
         
-        .carrossel-img:img flutuante {
-            transformar: escala(1,05);
+        .carousel-img:hover img {
+            transform: scale(1.05);
         }
         
-        .conteúdo-carrossel {
-            alinhamento de texto: centro;
-            largura: 100%;
+        .carousel-content {
+            text-align: center;
+            width: 100%;
         }
         
-        .conteúdo do carrossel h3 {
-            tamanho da fonte: clamp(1.4rem, 4vw, 1.5rem);
-            margem inferior: 12px;
-            cor: var(--accent);
+        .carousel-content h3 {
+            font-size: clamp(1.4rem, 4vw, 1.5rem);
+            margin-bottom: 12px;
+            color: var(--accent);
         }
         
-        .conteúdo do carrossel p {
-            cor: var(--texto);
-            margem inferior: 15px;
-            opacidade: 0,9;
-            tamanho da fonte: clamp(0.9rem, 3vw, 1rem);
-            espessura da fonte: 500;
+        .carousel-content p {
+            color: var(--text);
+            margin-bottom: 15px;
+            opacity: 0.9;
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            font-weight: 500;
         }
         
         .carousel-content ul {
-            estilo de lista: nenhum;
-            margem: 15px 0;
-            alinhamento de texto: esquerda;
-            preenchimento: 0 15px;
+            list-style: none;
+            margin: 15px 0;
+            text-align: left;
+            padding: 0 15px;
         }
         
         .carousel-content ul li {
-            margem inferior: 8px;
-            preenchimento-esquerdo: 25px;
-            posição: relativa;
-            tamanho da fonte: clamp(0,9rem, 2,5vw, 0,95rem);
-            cor: var(--texto);
-            altura da linha: 1,5;
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+            font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+            color: var(--text);
+            line-height: 1.5;
         }
         
-        .carousel-content ul li:antes {
-            conteúdo: "✓";
-            cor: var(--accent);
-            posição: absoluta;
-            esquerda: 0;
-            espessura da fonte: negrito;
-            tamanho da fonte: 1.1rem;
+        .carousel-content ul li:before {
+            content: "✓";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.1rem;
         }
         
         /* Botão Ver Serviços Completos */
-        .serviços-btn-container {
-            margem superior: 25px;
-            alinhamento de texto: centro;
+        .services-btn-container {
+            margin-top: 25px;
+            text-align: center;
         }
         
-        .serviços-btn {
-            exibição: inline-flex;
-            alinhar-itens: centro;
-            lacuna: 8px;
-            preenchimento: 14px 22px;
-            fundo: var(--accent);
-            cor: var(--primary);
-            decoração de texto: nenhuma;
-            raio da borda: 50px;
-            espessura da fonte: 600;
-            transição: todos os 0,3s;
-            caixa-sombra: 0 4px 12px rgba(192, 192, 192, 0.4);
-            tamanho da fonte: clamp(14px, 3vw, 16px);
-            altura mínima: 44px;
+        .services-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 22px;
+            background: var(--accent);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(192, 192, 192, 0.4);
+            font-size: clamp(14px, 3vw, 16px);
+            min-height: 44px;
         }
         
-        .serviços-btn:hover {
-            transformar: translateY(-3px);
-            caixa-sombra: 0 6px 18px rgba(192, 192, 192, 0.6);
-            plano de fundo: var(--accent-hover);
+        .services-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(192, 192, 192, 0.6);
+            background: var(--accent-hover);
         }
         
         /* Controles do carrossel */
-        .controles-carrossel {
-            posição: absoluta;
-            topo: 50%;
-            esquerda: 0;
-            direita: 0;
-            exibição: flexível;
-            justificar-conteúdo: espaço-entre;
-            alinhar-itens: centro;
-            transformar: traduzirY(-50%);
-            preenchimento: 0 15px;
-            eventos de ponteiro: nenhum;
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(-50%);
+            padding: 0 15px;
+            pointer-events: none;
         }
         
-        .seta-carrossel {
-            fundo: rgba(255, 255, 255, 0.1);
-            largura: clamp(30px, 8vw, 40px);
-            altura: clamp(30px, 8vw, 40px);
-            raio da borda: 50%;
-            exibição: flexível;
-            alinhar-itens: centro;
-            justificar-conteúdo: centro;
-            cursor: ponteiro;
-            transição: todos os 0,3s;
-            borda: 1px sólido rgba(255, 255, 255, 0.2);
-            tamanho da fonte: clamp(14px, 4vw, 16px);
-            cor: var(--accent);
-            eventos de ponteiro: automático;
+        .carousel-arrow {
+            background: rgba(255, 255, 255, 0.1);
+            width: clamp(30px, 8vw, 40px);
+            height: clamp(30px, 8vw, 40px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: clamp(14px, 4vw, 16px);
+            color: var(--accent);
+            pointer-events: auto;
         }
         
-        .seta-carrossel:passe o mouse {
-            fundo: rgba(192, 192, 192, 0.2);
-            transformar: escala(1.1);
+        .carousel-arrow:hover {
+            background: rgba(192, 192, 192, 0.2);
+            transform: scale(1.1);
         }
         
-        .indicadores-carrossel {
-            exibição: flexível;
-            justificar-conteúdo: centro;
-            lacuna: 10px;
-            margem: 20px 0 10px;
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0 10px;
         }
         
-        .indicador {
-            largura: 10px;
-            altura: 10px;
-            raio da borda: 50%;
-            fundo: rgba(255, 255, 255, 0.3);
-            cursor: ponteiro;
-            transição: todos os 0,3s;
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s;
         }
         
-        .indicador.ativo {
-            fundo: var(--accent);
-            transformar: escala(1.2);
+        .indicator.active {
+            background: var(--accent);
+            transform: scale(1.2);
         }
         
         /* Produtos */
-        .produtos {
-            preenchimento: 60px 0;
-            fundo: var(--primário);
+        .products {
+            padding: 60px 0;
+            background: var(--primary);
         }
         
-        .produtos-simples {
-            largura máxima: min(800px, 90vw);
-            margem: 0 automático;
-            fundo: var(--card-bg);
-            raio da borda: 12px;
-            preenchimento: 30px;
-            filtro de pano de fundo: desfoque(10px);
-            borda: 1px sólido var(--card-border);
-            alinhamento de texto: centro;
+        .products-simple {
+            max-width: min(800px, 90vw);
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            text-align: center;
         }
         
-        .produtos-simples h3 {
-            cor: var(--accent);
-            margem inferior: 20px;
-            tamanho da fonte: clamp(1.3rem, 4vw, 1.5rem);
+        .products-simple h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: clamp(1.3rem, 4vw, 1.5rem);
         }
         
-        .lista de produtos {
-            estilo de lista: nenhum;
-            margem inferior: 25px;
-            alinhamento de texto: esquerda;
+        .products-list {
+            list-style: none;
+            margin-bottom: 25px;
+            text-align: left;
         }
         
-        .lista de produtos li {
-            margem inferior: 12px;
-            preenchimento-esquerdo: 25px;
-            posição: relativa;
-            tamanho da fonte: clamp(0,9rem, 2,5vw, 0,95rem);
-            cor: var(--texto);
+        .products-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+            color: var(--text);
         }
         
-        .lista de produtos li:antes {
-            conteúdo: "✓";
-            cor: var(--accent);
-            posição: absoluta;
-            esquerda: 0;
-            espessura da fonte: negrito;
-            tamanho da fonte: 1rem;
+        .products-list li:before {
+            content: "✓";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1rem;
         }
         
-        .produto-btn {
-            exibição: inline-flex;
-            alinhar-itens: centro;
-            lacuna: 8px;
-            preenchimento: clamp(12px, 3vw, 14px) clamp(24px, 5vw, 28px);
-            fundo: var(--accent);
-            cor: var(--primary);
-            decoração de texto: nenhuma;
-            raio da borda: 50px;
-            espessura da fonte: 600;
-            transição: todos os 0,3s de facilidade;
-            caixa-sombra: 0 4px 12px rgba(192, 192, 192, 0.4);
-            tamanho da fonte: clamp(0,9rem, 2,5vw, 1rem);
-            borda: nenhuma;
-            cursor: ponteiro;
-            altura mínima: 44px;
+        .product-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: clamp(12px, 3vw, 14px) clamp(24px, 5vw, 28px);
+            background: var(--accent);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(192, 192, 192, 0.4);
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            border: none;
+            cursor: pointer;
+            min-height: 44px;
         }
         
-        .produto-btn:passe o mouse {
-            transformar: translateY(-3px);
-            caixa-sombra: 0 6px 18px rgba(192, 192, 192, 0.6);
-            plano de fundo: var(--accent-hover);
+        .product-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(192, 192, 192, 0.6);
+            background: var(--accent-hover);
         }
         
         /* Sobre */
-        .sobre {
-            preenchimento: 60px 0;
-            plano de fundo: gradiente linear (135 graus, var (--secundário) 0%, var (--primário) 100%);
-            alinhamento de texto: centro;
+        .about {
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            text-align: center;
         }
         
-        .sobre-conteúdo {
-            largura máxima: min(800px, 90vw);
-            margem: 0 automático;
+        .about-content {
+            max-width: min(800px, 90vw);
+            margin: 0 auto;
         }
         
-        .sobre-texto p {
-            tamanho da fonte: clamp(0,9rem, 2,5vw, 1rem);
-            margem inferior: 25px;
-            opacidade: 0,9;
-            altura da linha: 1,7;
-            cor: var(--text-muted);
+        .about-text p {
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            margin-bottom: 25px;
+            opacity: 0.9;
+            line-height: 1.7;
+            color: var(--text-muted);
         }
         
-        .sobre-recursos {
-            exibição: grade;
-            grid-template-columns: repetir(ajuste automático, minmax(min(220px, 100%), 1fr));
-            lacuna: 12px;
-            margem superior: 25px;
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+            gap: 12px;
+            margin-top: 25px;
         }
         
-        .sobre-recurso {
-            exibição: flexível;
-            alinhar-itens: centro;
-            lacuna: 10px;
-            preenchimento: 12px;
-            fundo: var(--card-bg);
-            raio da borda: 12px;
-            transição: transformação 0,3s facilidade;
-            alinhamento de texto: esquerda;
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            text-align: left;
         }
         
-        .sobre-recurso:hover {
-            transformar: translateX(5px);
-            fundo: rgba(192, 192, 192, 0.1);
+        .about-feature:hover {
+            transform: translateX(5px);
+            background: rgba(192, 192, 192, 0.1);
         }
         
-        .sobre-recurso i {
-            cor: var(--accent);
-            tamanho da fonte: clamp(1rem, 3vw, 1.2rem);
-            largura: 25px;
+        .about-feature i {
+            color: var(--accent);
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            width: 25px;
         }
         
-        .sobre-recurso span {
-            tamanho da fonte: clamp(0,85rem, 2,5vw, 0,9rem);
-            espessura da fonte: 500;
-            cor: var(--texto);
+        .about-feature span {
+            font-size: clamp(0.85rem, 2.5vw, 0.9rem);
+            font-weight: 500;
+            color: var(--text);
         }
         
         /* Contato */
-        .contato {
-            preenchimento: 50px 0 30px;
-            fundo: var(--primário);
-            alinhamento de texto: centro;
+        .contact {
+            padding: 50px 0 30px;
+            background: var(--primary);
+            text-align: center;
         }
         
-        .horário comercial {
-            fundo: var(--card-bg);
-            preenchimento: 20px;
-            raio da borda: 12px;
-            alinhamento de texto: centro;
-            filtro de pano de fundo: desfoque(10px);
-            borda: 1px sólido var(--card-border);
-            largura máxima: min(380px, 90vw);
-            margem: 0 automático;
-            animação: fadeIn 1s de facilidade;
+        .business-hours {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            max-width: min(380px, 90vw);
+            margin: 0 auto;
+            animation: fadeIn 1s ease;
         }
         
-        .horário comercial h4 {
-            cor: var(--accent);
-            margem inferior: 12px;
-            tamanho da fonte: clamp(1rem, 3vw, 1.1rem);
-            espessura da fonte: 600;
-            exibição: flexível;
-            alinhar-itens: centro;
-            justificar-conteúdo: centro;
-            lacuna: 8px;
+        .business-hours h4 {
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-size: clamp(1rem, 3vw, 1.1rem);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
         
-        .horário comercial p {
-            margem inferior: 6px;
-            tamanho da fonte: clamp(0,8rem, 2,5vw, 0,9rem);
-            opacidade: 0,9;
-            cor: var(--texto);
+        .business-hours p {
+            margin-bottom: 6px;
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            opacity: 0.9;
+            color: var(--text);
         }
         
         /* Rodapé */
-        rodapé {
-            fundo: #0a0a0a;
-            preenchimento: 20px 0 12px;
-            borda superior: 1px sólido rgba(192, 192, 192, 0.2);
+        footer {
+            background: #0a0a0a;
+            padding: 20px 0 12px;
+            border-top: 1px solid rgba(192, 192, 192, 0.2);
         }
         
-        .rodapé-conteúdo {
-            exibição: grade;
-            colunas de modelo de grade: 1fr 2fr 1fr;
-            lacuna: 15px;
-            margem inferior: 15px;
-            alinhar-itens: centro;
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+            align-items: center;
         }
         
-        .rodapé-logotipo {
-            exibição: flexível;
-            alinhar-itens: centro;
-            lacuna: 8px;
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
-        .rodapé-logotipo .logotipo-img {
-            largura: 30px;
-            altura: 30px;
-            tamanho da fonte: 14px;
+        .footer-logo .logo-img {
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
         }
         
         .footer-logo span {
-            tamanho da fonte: clamp(0,8rem, 2,5vw, 0,85rem);
-            espessura da fonte: 700;
-            cor: var(--accent);
+            font-size: clamp(0.8rem, 2.5vw, 0.85rem);
+            font-weight: 700;
+            color: var(--accent);
         }
         
-        .rodapé-contato {
-            alinhamento de texto: centro;
+        .footer-contact {
+            text-align: center;
         }
         
-        .rodapé-contato p {
-            margem inferior: 4px;
-            opacidade: 0,9;
-            tamanho da fonte: clamp(0,7rem, 2vw, 0,75rem);
-            exibição: flexível;
-            justificar-conteúdo: centro;
-            alinhar-itens: centro;
-            lacuna: 4px;
-            cor: var(--texto);
+        .footer-contact p {
+            margin-bottom: 4px;
+            opacity: 0.9;
+            font-size: clamp(0.7rem, 2vw, 0.75rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            color: var(--text);
         }
         
-        .rodapé-social {
-            exibição: flexível;
-            lacuna: 10px;
-            justificar-conteúdo: flex-end;
+        .footer-social {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
         }
         
-        .link social {
-            largura: 34px;
-            altura: 34px;
-            fundo: rgba(255, 255, 255, 0.1);
-            raio da borda: 50%;
-            exibição: flexível;
-            alinhar-itens: centro;
-            justificar-conteúdo: centro;
-            cor: var(--texto);
-            decoração de texto: nenhuma;
-            transição: todos os 0,3s de facilidade;
-            tamanho da fonte: 0,9rem;
+        .social-link {
+            width: 34px;
+            height: 34px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
         
-        .link social:passe o mouse {
-            fundo: var(--accent);
-            cor: var(--primary);
-            transformar: translateY(-2px);
-            caixa-sombra: 0 4px 12px rgba(192, 192, 192, 0.4);
+        .social-link:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(192, 192, 192, 0.4);
         }
         
         /* Correções específicas do Instagram WebView */
-        .instagram-webview .herói {
-            altura mínima: calc(60vh - 70px) !importante;
+        .instagram-webview .hero {
+            min-height: calc(60vh - 70px) !important;
         }
         
         .instagram-webview .btn {
-            altura mínima: 44px !importante;
-            exibição: flex !importante;
-            alinhar-itens: centro !importante;
-            justificar-conteúdo: centro !importante;
+            min-height: 44px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
         }
         
         /* Prevenir problemas de rolagem no Instagram */
-        .instagram-webview corpo {
-            estouro: oculto !importante;
-            altura: 100% !importante;
-            posição: relativa;
+        .instagram-webview body {
+            overflow: hidden !important;
+            height: 100% !important;
+            position: relative;
         }
         
         /* Melhorar a visualização de imagens */
         .instagram-webview img {
-            transformar: translateZ(0);
+            transform: translateZ(0);
         }
         
         /* Indicador de animação de rolagem */
-        .indicador de rolagem {
-            posição: fixa;
-            topo: 50%;
-            direita: 20px;
-            transformar: traduzirY(-50%);
-            exibição: flexível;
-            flex-direction: coluna;
-            lacuna: 15px;
-            índice z: 998;
+        .scroll-indicator {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 998;
         }
         
-        .scroll-ponto {
-            largura: 12px;
-            altura: 12px;
-            raio da borda: 50%;
-            fundo: rgba(255, 255, 255, 0.3);
-            borda: 2px sólido transparente;
-            transição: todos os 0,3s de facilidade;
-            cursor: ponteiro;
+        .scroll-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
         
-        .scroll-dot.ativo {
-            fundo: var(--accent);
-            transformar: escala(1.3);
-            cor da borda: rgba(255, 255, 255, 0.5);
+        .scroll-dot.active {
+            background: var(--accent);
+            transform: scale(1.3);
+            border-color: rgba(255, 255, 255, 0.5);
         }
         
-        .scroll-dot:passe o mouse {
-            plano de fundo: var(--accent-hover);
-            transformar: escala(1.2);
+        .scroll-dot:hover {
+            background: var(--accent-hover);
+            transform: scale(1.2);
         }
         
         /* Destaque de seção durante a rolagem */
-        .seção-destaque {
-            posição: relativa;
+        .section-highlight {
+            position: relative;
         }
         
-        .section-highlight::antes de {
-            contente: '';
-            posição: absoluta;
-            topo: -5px;
-            esquerda: -5px;
-            direita: -5px;
-            inferior: -5px;
-            borda: 2px sólido var(--accent);
-            raio da borda: 10px;
-            animação: destaque com facilidade de 1,5s;
-            opacidade: 0;
+        .section-highlight::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 2px solid var(--accent);
+            border-radius: 10px;
+            animation: highlight 1.5s ease;
+            opacity: 0;
         }
         
-        @keyframes destaque {
+        @keyframes highlight {
             0% {
-                opacidade: 0;
-                transformar: escala(0,95);
+                opacity: 0;
+                transform: scale(0.95);
             }
             50% {
-                opacidade: 1;
-                transformar: escala(1.02);
+                opacity: 1;
+                transform: scale(1.02);
             }
             100% {
-                opacidade: 0;
-                transformar: escala(1);
+                opacity: 0;
+                transform: scale(1);
             }
         }
         
-        @quadros-chave fadeIn {
-            de {
-                opacidade: 0;
-                transformar: translateY(-15px);
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-15px);
             }
-            para {
-                opacidade: 1;
-                transformar: translateY(0);
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
         
         /* Responsivo */
-        @media (largura máxima: 1024px) {
-            .rodapé-conteúdo {
-                colunas de modelo de grade: 1fr 1fr;
-                lacuna: 20px;
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
             }
             
-            .rodapé-contato {
-                ordem: 3;
-                coluna de grade: intervalo 2;
-                alinhamento de texto: centro;
+            .footer-contact {
+                order: 3;
+                grid-column: span 2;
+                text-align: center;
             }
             
-            .indicador de rolagem {
-                direita: 10px;
+            .scroll-indicator {
+                right: 10px;
             }
         }
         
-        @media (largura máxima: 768px) {
-            .herói {
-                preenchimento: 90px 0 40px;
-                altura mínima: 50vh;
+        @media (max-width: 768px) {
+            .hero {
+                padding: 90px 0 40px;
+                min-height: 50vh;
             }
             
-            .botões de herói {
-                justificar-conteúdo: centro;
+            .hero-buttons {
+                justify-content: center;
             }
             
-            .título-da-seção {
-                tamanho da fonte: 1,7rem;
+            .section-title {
+                font-size: 1.7rem;
             }
             
-            .rodapé-conteúdo {
-                colunas de modelo de grade: 1fr;
-                alinhamento de texto: centro;
-                lacuna: 15px;
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 15px;
             }
             
-            .rodapé-contato {
-                ordem: 0;
-                coluna de grade: intervalo 1;
+            .footer-contact {
+                order: 0;
+                grid-column: span 1;
             }
             
-            .rodapé-social {
-                justificar-conteúdo: centro;
+            .footer-social {
+                justify-content: center;
             }
             
             /* Menu móvel */
-            .menu-alternar {
-                exibição: flexível;
+            .menu-toggle {
+                display: flex;
             }
             
-            navegação {
-                posição: fixa;
-                topo: 70px;
-                esquerda: 0;
-                largura: 100%;
-                fundo: rgba(17, 17, 17, 0,98);
-                flex-direction: coluna;
-                preenchimento: 15px;
-                lacuna: 10px;
-                transformar: traduzirY(-100%);
-                opacidade: 0;
-                visibilidade: oculto;
-                transição: todos os 0,3s de facilidade;
-                caixa-sombra: 0 10px 20px rgba(0, 0, 0, 0.2);
+            nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(17, 17, 17, 0.98);
+                flex-direction: column;
+                padding: 15px;
+                gap: 10px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             }
             
-            nav.ativo {
-                transformar: translateY(0);
-                opacidade: 1;
-                visibilidade: visível;
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
             }
             
-            .grade de recursos {
-                grid-template-columns: repetir(ajuste automático, minmax(150px, 1fr));
-                lacuna: 12px;
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 12px;
             }
             
-            .recurso {
-                preenchimento: 15px 12px;
+            .feature {
+                padding: 15px 12px;
             }
             
-            .horário comercial {
-                largura máxima: 90%;
+            .business-hours {
+                max-width: 90%;
             }
             
-            .controles-carrossel {
-                preenchimento: 0 5px;
+            .carousel-controls {
+                padding: 0 5px;
             }
             
-            .indicador de rolagem {
-                exibição: nenhuma;
+            .scroll-indicator {
+                display: none;
             }
         }
         
-        @media (largura máxima: 480px) {
-            .herói {
-                altura mínima: 40vh;
-                preenchimento: 80px 0 30px;
+        @media (max-width: 480px) {
+            .hero {
+                min-height: 40vh;
+                padding: 80px 0 30px;
             }
             
-            .botões de herói {
-                flex-direction: coluna;
-                alinhar-itens: centro;
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
             }
             
             .btn {
-                largura: 100%;
-                largura máxima: 280px;
-                justificar-conteúdo: centro;
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
             }
             
-            .rodapé-conteúdo {
-                lacuna: 12px;
+            .footer-content {
+                gap: 12px;
             }
             
-            .título-da-seção {
-                tamanho da fonte: 1,6rem;
+            .section-title {
+                font-size: 1.6rem;
             }
             
-            .indicador {
-                largura: 8px;
-                altura: 8px;
+            .indicator {
+                width: 8px;
+                height: 8px;
             }
             
             .carousel-content ul li {
-                tamanho da fonte: 0,9rem;
+                font-size: 0.9rem;
             }
         }
         
         /* Orientação paisagem em dispositivos móveis */
-        @media screen e (altura máxima: 480px) e (orientação: paisagem) {
-            .herói {
-                altura mínima: 100vh !importante;
-                preenchimento: 80px 0 !importante;
+        @media screen and (max-height: 480px) and (orientation: landscape) {
+            .hero {
+                min-height: 100vh !important;
+                padding: 80px 0 !important;
             }
             
-            .conteúdo do herói {
-                preenchimento superior: 20px;
+            .hero-content {
+                padding-top: 20px;
             }
         }
         
         /* Efeito de fade-in para os frascos */
-        seção {
-            opacidade: 0;
-            transformar: translateY(40px);
-            transição: todos os 0,8s de facilidade;
+        section {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
         }
         
-        seção.visível {
-            opacidade: 1;
-            transformar: translateY(0);
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
-    </estilo>
+    </style>
 </head>
-<corpo>
+<body>
     <!-- Botão Voltar ao topo -->
-    <div class="voltar ao topo">
-        <i class="fas fa-seta-para-cima"></i>
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
     </div>
     
     <!-- Indicador de rolagem ATUALIZADO -->
-    <div class="indicador de rolagem">
+    <div class="scroll-indicator">
         <div class="scroll-dot" data-section="hero" title="Início"></div>
         <div class="scroll-dot" data-section="servicos" title="Serviços"></div>
         <div class="scroll-dot" data-section="produtos" title="Produtos"></div>
@@ -1028,91 +1028,91 @@
         <div class="scroll-dot" data-section="contato" title="Contato"></div>
     </div>
     
-    <!-- Cabeçalho -->
-    <cabeçalho>
+    <!-- Header -->
+    <header>
         <div class="container">
-            <div class="logotipo">
+            <div class="logo">
                 <div class="logo-img">
                     <i class="fas fa-cut"></i>
                 </div>
                 <h1>BARBEARIA CLÁSSICA</h1>
             </div>
-            <botão class="menu-toggle">
+            <button class="menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
-            </botão>
-            <navegação>
+            </button>
+            <nav>
                 <a href="#servicos">Serviços</a>
                 <a href="#produtos">Produtos</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#contato">Contato</a>
-            </navegação>
+            </nav>
         </div>
-    </cabeçalho>
+    </header>
     
-    <!-- Seção de Heróis -->
-    <seção class="herói" id="herói">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
                 <h2>ESTILO E TRADIÇÃO</h2>
                 <p>A melhor barbearia de Araxá e região</p>
-                <div class="botões-herói">
+                <div class="hero-buttons">
                     <a href="https://wa.me/553499269707?text=Olá! Gostaria de agendar um horário na barbearia ✂️" class="btn whatsapp-btn">
                         <i class="fab fa-whatsapp"></i> Agendar Horário
                     </a>
                     <a href="https://www.instagram.com/barbeariaestiloclassico" class="btn instagram-btn">
                         <i class="fab fa-instagram"></i> Instagram
                     </a>
-                    <a href="https://maps.app.goo.gl/Z6brWy7twMynjEsm7" class="btn localização-btn">
+                    <a href="https://maps.app.goo.gl/Z6brWy7twMynjEsm7" class="btn location-btn">
                         <i class="fas fa-map-marker-alt"></i> Localização
                     </a>
                     <!-- BOTÃO MODIFICADO -->
-                    <a href="#servicos" class="btn serviços-herói-btn">
+                    <a href="#servicos" class="btn services-hero-btn">
                         <i class="fas fa-cut"></i> Ver Serviços
                     </a>
                 </div>
             </div>
         </div>
-    </seção>
+    </section>
     
     <!-- Recursos -->
-    <section class="recursos">
+    <section class="features">
         <div class="container">
-            <div class="grade de recursos">
-                <div class="recurso">
+            <div class="features-grid">
+                <div class="feature">
                     <i class="fas fa-cut"></i>
                     <h4>Cortes Modernos</h4>
                     <p>Estilo e precisão em cada corte</p>
                 </div>
-                <div class="recurso">
+                <div class="feature">
                     <i class="fas fa-user-tie"></i>
                     <h4>Profissionais</h4>
                     <p>Barbeiros qualificados</p>
                 </div>
-                <div class="recurso">
+                <div class="feature">
                     <i class="fas fa-spa"></i>
                     <h4>Relaxamento</h4>
                     <p>Ambiente climatizado</p>
                 </div>
-                <div class="recurso">
+                <div class="feature">
                     <i class="fas fa-star"></i>
                     <h4>Qualidade</h4>
                     <p>Produtos premium</p>
                 </div>
             </div>
         </div>
-    </seção>
+    </section>
     
     <!-- Seção de Serviços MODIFICADA -->
-    <seção id="serviços" class="serviços">
+    <section id="servicos" class="services">
         <div class="container">
             <h2 class="section-title">Nossos Serviços</h2>
-            <div class="carrossel de serviços" id="carrossel de serviços">
-                <div class="carrossel-container" id="carrossel-serviços">
+            <div class="services-carousel" id="services-carousel">
+                <div class="carousel-container" id="carousel-services">
                     <!-- Corte de Cabelo -->
-                    <div class="carrossel-slide">
-                        <div class="carrossel-img">
+                    <div class="carousel-slide">
+                        <div class="carousel-img">
                             <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Corte de Cabelo">
                         </div>
                         <div class="carousel-content">
@@ -1126,8 +1126,8 @@
                                 <li>💈 Acabamento perfeito</li>
                             </ul>
                             <!-- BOTÃO VER SERVIÇOS COMPLETOS ADICIONADO DENTRO DO RETÂNGULO -->
-                            <div class="serviços-btn-container">
-                                <a href="https://wa.me/553499269707?text=Olá! Gostaria de saber mais sobre os serviços de barbearia ✂️" class="services-btn">
+                            <div class="services-btn-container">
+                                <a href="https://wa.me/553499269707?text=Olá! Gostaria de saber mais sobre os serviços da barbearia ✂️" class="services-btn">
                                     <i class="fas fa-list"></i> Ver Todos os Serviços
                                 </a>
                             </div>
@@ -1135,8 +1135,8 @@
                     </div>
                     
                     <!-- Barba -->
-                    <div class="carrossel-slide">
-                        <div class="carrossel-img">
+                    <div class="carousel-slide">
+                        <div class="carousel-img">
                             <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1488&q=80" alt="Barba">
                         </div>
                         <div class="carousel-content">
@@ -1150,8 +1150,8 @@
                                 <li>💆‍♂️ Relaxamento garantido</li>
                             </ul>
                             <!-- BOTÃO VER SERVIÇOS COMPLETOS ADICIONADO DENTRO DO RETÂNGULO -->
-                            <div class="serviços-btn-container">
-                                <a href="https://wa.me/553499269707?text=Olá! Gostaria de saber mais sobre os serviços de barbearia ✂️" class="services-btn">
+                            <div class="services-btn-container">
+                                <a href="https://wa.me/553499269707?text=Olá! Gostaria de saber mais sobre os serviços da barbearia ✂️" class="services-btn">
                                     <i class="fas fa-list"></i> Ver Todos os Serviços
                                 </a>
                             </div>
@@ -1159,8 +1159,8 @@
                     </div>
                     
                     <!-- Combo Completo -->
-                    <div class="carrossel-slide">
-                        <div class="carrossel-img">
+                    <div class="carousel-slide">
+                        <div class="carousel-img">
                             <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Combo Completo">
                         </div>
                         <div class="carousel-content">
@@ -1169,13 +1169,13 @@
                             <ul>
                                 <li>✂️ Corte de cabelo completo</li>
                                 <li>🧔 Tratamento para barba</li>
-                                <li>🧴Produtos premium</li>
+                                <li>🧴 Produtos premium</li>
                                 <li>💆‍♂️ Massagem relaxante</li>
                                 <li>💰 Desconto especial</li>
                             </ul>
                             <!-- BOTÃO VER SERVIÇOS COMPLETOS ADICIONADO DENTRO DO RETÂNGULO -->
-                            <div class="serviços-btn-container">
-                                <a href="https://wa.me/553499269707?text=Olá! Gostaria de saber mais sobre os serviços de barbearia ✂️" class="services-btn">
+                            <div class="services-btn-container">
+                                <a href="https://wa.me/553499269707?text=Olá! Gostaria de saber mais sobre os serviços da barbearia ✂️" class="services-btn">
                                     <i class="fas fa-list"></i> Ver Todos os Serviços
                                 </a>
                             </div>
@@ -1184,35 +1184,35 @@
                 </div>
                 
                 <!-- Controles do carrossel -->
-                <div class="controles-carrossel">
-                    <div class="carrossel-seta anterior" id="serviços-anteriores">
+                <div class="carousel-controls">
+                    <div class="carousel-arrow prev" id="prev-services">
                         <i class="fas fa-chevron-left"></i>
                     </div>
-                    <div class="carousel-arrow próximo" id="next-services">
+                    <div class="carousel-arrow next" id="next-services">
                         <i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
             </div>
             
             <!-- Indicadores -->
-            <div class="carrossel-indicadores" id="indicadores-serviços">
-                <div class="indicador ativo" data-index="0"></div>
-                <div class="indicador" índice de dados="1"></div>
-                <div class="indicador" índice de dados="2"></div>
+            <div class="carousel-indicators" id="indicators-services">
+                <div class="indicator active" data-index="0"></div>
+                <div class="indicator" data-index="1"></div>
+                <div class="indicator" data-index="2"></div>
             </div>
         </div>
-    </seção>
+    </section>
     
     <!-- Produtos -->
     <section id="produtos" class="products">
         <div class="container">
             <h2 class="section-title">Produtos e Acessórios</h2>
-            <div class="produtos-simples">
+            <div class="products-simple">
                 <h3>Produtos de Qualidade</h3>
-                <ul class="lista-de-produtos">
+                <ul class="products-list">
                     <li>Pomadas e ceras para cabelo</li>
                     <li>Óleos e bálsamos para barba</li>
-                    <li>Shampoo e condicionadores específicos</li>
+                    <li>Shampoos e condicionadores específicos</li>
                     <li>Navalhas e lâminas de qualidade</li>
                     <li>Kits de cuidados masculinos</li>
                     <li>Perfumes e colônias masculinas</li>
@@ -1222,29 +1222,29 @@
                 </a>
             </div>
         </div>
-    </seção>
+    </section>
     
     <!-- Sobre -->
     <section id="sobre" class="about">
         <div class="container">
-            <div class="sobre-conteúdo">
+            <div class="about-content">
                 <h2 class="section-title">Barbearia Estilo Clássico</h2>
-                <div class="sobre-texto">
-                    <p>Especialistas em cortes masculinos com os melhores preços e atendimento personalizado em Araxá e região. Tradição e modernidade em um só lugar, com profissionais variados e produtos de alta qualidade.</p>
-                    <div class="sobre-recursos">
-                        <div class="sobre-recurso">
+                <div class="about-text">
+                    <p>Especialistas em cortes masculinos com os melhores preços e atendimento personalizado em Araxá e região. Tradição e modernidade em um só lugar, com profissionais qualificados e produtos de alta qualidade.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
                             <span>Produtos de qualidade</span>
                         </div>
-                        <div class="sobre-recurso">
+                        <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
                             <span>Atendimento personalizado</span>
                         </div>
-                        <div class="sobre-recurso">
+                        <div class="about-feature">
                             <i class="fas fa-user-tie"></i>
-                            <span>Configurações profissionais</span>
+                            <span>Profissionais qualificados</span>
                         </div>
-                        <div class="sobre-recurso">
+                        <div class="about-feature">
                             <i class="fas fa-clock"></i>
                             <span>Horários flexíveis</span>
                         </div>
@@ -1252,22 +1252,22 @@
                 </div>
             </div>
         </div>
-    </seção>
+    </section>
     
     <!-- Contato -->
-    <seção id="contato" class="contato">
+    <section id="contato" class="contact">
         <div class="container">
-            <div class="horário-comercial">
+            <div class="business-hours">
                 <h4><i class="far fa-clock"></i> Horário de Funcionamento</h4>
                 <p>Segunda a Sexta: 8h às 19h</p>
                 <p>Sábado: 8h às 18h</p>
                 <p>Domingo: 9h às 13h</p>
             </div>
         </div>
-    </seção>
+    </section>
     
     <!-- Rodapé -->
-    <rodapé>
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
@@ -1295,38 +1295,38 @@
                 <p>Todos os direitos reservados</p>
             </div>
         </div>
-    </rodapé>
+    </footer>
     
     <script>
         // ===== DETECÇÃO DE WEBVIEW DO INSTAGRAM =====
-        função isInInstagramWebView() {
+        function isInInstagramWebView() {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            retornar /Instagram/i.test(userAgent) || /FBAN|FBAV/i.test(userAgent);
+            return /Instagram/i.test(userAgent) || /FBAN|FBAV/i.test(userAgent);
         }
         
         // Aplicar aulas específicas para WebView do Instagram
-        função applyInstagramFix() {
-            se (isInInstagramWebView()) {
+        function applyInstagramFix() {
+            if (isInInstagramWebView()) {
                 document.body.classList.add('instagram-webview');
-                const estilo = document.createElement('estilo');
-                estilo.textContent = `
-                    [classe="banner"], [id*="banner"], [classe*="Banner"], [id*="Banner"] {
-                        exibição: nenhuma !importante;
+                const style = document.createElement('style');
+                style.textContent = `
+                    [class="banner"], [id*="banner"], [class*="Banner"], [id*="Banner"] {
+                        display: none !important;
                     }
-                    .btn, a, botão {
-                        cursor: ponteiro !importante;
-                        z-index: 9999 !importante;
-                        posição: relativa;
+                    .btn, a, button {
+                        cursor: pointer !important;
+                        z-index: 9999 !important;
+                        position: relative;
                     }
-                    corpo {
-                        -webkit-overflow-scrolling: toque em !importante;
+                    body {
+                        -webkit-overflow-scrolling: touch !important;
                     }
-                    .herói {
-                        posição: relativa;
-                        índice z: 1;
+                    .hero {
+                        position: relative;
+                        z-index: 1;
                     }
                 `;
-                document.head.appendChild(estilo);
+                document.head.appendChild(style);
             }
         }
         
@@ -1335,21 +1335,21 @@
         // Isso funciona melhor no Instagram WebView
         
         // ===== ATUALIZAR INDICADORES DE SCROLL =====
-        função updateScrollIndicator() {
-            const seções = document.querySelectorAll('seção[id]');
+        function updateScrollIndicator() {
+            const sections = document.querySelectorAll('section[id]');
             const scrollDots = document.querySelectorAll('.scroll-dot');
-            const scrollPosition = janela.scrollY;
+            const scrollPosition = window.scrollY;
             
-            seções.forEach(seção => {
-                const sectionTop = seção.offsetTop - 100;
-                const sectionHeight = seção.offsetHeight;
-                const sectionId = seção.getAttribute('id');
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
                 
-                se (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    scrollDots.forEach(ponto => {
-                        dot.classList.remove('ativo');
-                        se (dot.getAttribute('seção de dados') === sectionId) {
-                            dot.classList.add('ativo');
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    scrollDots.forEach(dot => {
+                        dot.classList.remove('active');
+                        if (dot.getAttribute('data-section') === sectionId) {
+                            dot.classList.add('active');
                         }
                     });
                 }
@@ -1358,46 +1358,46 @@
         
         // ===== OBSERVADOR DE INTERSEÇÃO PARA ANIMAÇÕES =====
         const observerOptions = {
-            limite: 0,1,
+            threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
         
-        const observer = new IntersectionObserver((entradas) => {
-            entradas.paraCada(entrada => {
-                se (entrada.isIntersecting) {
-                    entrada.target.classList.add('visível');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
                 }
             });
         }, observerOptions);
         
         // Observar todas as letras
-        document.querySelectorAll('seção').forEach(seção => {
-            observador.observar(seção);
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
         });
         
         // ===== ROLAGEM SUAVE PARA LINKS INTERNOS =====
         // Agora usando o método nativo do CSS, mas mantemos a prevenção de comportamento padrão
-        função setupSmoothScroll() {
-            document.querySelectorAll('a[href^="#"]').forEach(âncora => {
-                anchor.addEventListener('clique', função (e) {
+        function setupSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
                     // Verifique se o link é para uma seção interna
                     const href = this.getAttribute('href');
-                    se (href !== '#' && href.startsWith('#')) {
+                    if (href !== '#' && href.startsWith('#')) {
                         e.preventDefault();
                         const targetId = href;
                         const targetElement = document.querySelector(targetId);
                         
-                        se (elemento_alvo) {
+                        if (targetElement) {
                             // Usar scroll nativo com comportamento suave (agora controlado pelo CSS)
                             targetElement.scrollIntoView({
-                                comportamento: 'suave'
+                                behavior: 'smooth'
                             });
                             
                             // Fechar menu mobile após clicar em um link
-                            se (window.innerWidth <= 768) {
-                                document.querySelector('nav').classList.remove('ativo');
-                                document.body.style.overflow = 'automático';
-                                document.querySelector('.menu-toggle').classList.remove('ativo');
+                            if (window.innerWidth <= 768) {
+                                document.querySelector('nav').classList.remove('active');
+                                document.body.style.overflow = 'auto';
+                                document.querySelector('.menu-toggle').classList.remove('active');
                             }
                         }
                     }
@@ -1406,15 +1406,15 @@
         }
         
         // Navegação pelos pontos do indicador de rolagem
-        função setupScrollDots() {
-            document.querySelectorAll('.scroll-dot').forEach(ponto => {
-                dot.addEventListener('clique', () => {
-                    const targetId = '#' + dot.getAttribute('seção de dados');
+        function setupScrollDots() {
+            document.querySelectorAll('.scroll-dot').forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const targetId = '#' + dot.getAttribute('data-section');
                     const targetElement = document.querySelector(targetId);
                     
-                    se (elemento_alvo) {
+                    if (targetElement) {
                         targetElement.scrollIntoView({
-                            comportamento: 'suave'
+                            behavior: 'smooth'
                         });
                     }
                 });
@@ -1422,203 +1422,203 @@
         }
         
         // ===== CARROSSEL DE SERVIÇOS =====
-        função setupCarousel(carouselId, prevButtonId, nextButtonId, indicatorsId) {
-            const carrossel = document.getElementById(carouselId);
-            const slides = carrossel.querySelectorAll('.carousel-slide');
-            indicadores const = document.getElementById(indicatorsId).querySelectorAll('.indicator');
-            const carouselContainer = carrossel.closest('.services-carousel');
+        function setupCarousel(carouselId, prevButtonId, nextButtonId, indicatorsId) {
+            const carousel = document.getElementById(carouselId);
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const indicators = document.getElementById(indicatorsId).querySelectorAll('.indicator');
+            const carouselContainer = carousel.closest('.services-carousel');
             const prevButton = document.getElementById(prevButtonId);
             const nextButton = document.getElementById(nextButtonId);
             
-            deixe currentIndex = 0;
+            let currentIndex = 0;
             const slideCount = slides.length;
-            deixe autoSlideInterval;
-            deixe userInteractionTimeout;
-            deixe isDragging = falso;
-            deixe startX = 0;
-            deixe startScrollLeft = 0;
+            let autoSlideInterval;
+            let userInteractionTimeout;
+            let isDragging = false;
+            let startX = 0;
+            let startScrollLeft = 0;
             
-            função updateCarousel() {
-                carrossel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
                 
                 // Atualizar indicadores
-                indicadores.forEach((indicador, índice) => {
-                    se (índice === currentIndex) {
-                        indicador.classList.add('ativo');
-                    } outro {
-                        indicator.classList.remove('ativo');
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
                     }
                 });
             }
             
-            função nextSlide() {
-                ÍndiceAtual = (ÍndiceAtual + 1) % ContagemDeSlides;
-                atualizarCarrossel();
-                redefinirAutoSlide();
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateCarousel();
+                resetAutoSlide();
             }
             
-            função prevSlide() {
-                ÍndiceAtual = (ÍndiceAtual - 1 + ContagemDeSlides) % ContagemDeSlides;
-                atualizarCarrossel();
-                redefinirAutoSlide();
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateCarousel();
+                resetAutoSlide();
             }
             
             // Iniciar slides automáticos
-            função startAutoSlide() {
+            function startAutoSlide() {
                 autoSlideInterval = setInterval(() => {
-                    próximoSlide();
+                    nextSlide();
                 }, 5000);
             }
             
             // Parar slides automáticos
-            função stopAutoSlide() {
+            function stopAutoSlide() {
                 clearInterval(autoSlideInterval);
             }
             
             // Reiniciar slides automáticos após 26 segundos de inatividade
-            função resetAutoSlide() {
-                clearTimeout(Tempo limite de interação do usuário);
-                pararAutoSlide();
-                Tempo limite de interação do usuário = definir tempo limite (() => {
-                    iniciarAutoSlide();
+            function resetAutoSlide() {
+                clearTimeout(userInteractionTimeout);
+                stopAutoSlide();
+                userInteractionTimeout = setTimeout(() => {
+                    startAutoSlide();
                 }, 26000);
             }
             
             // Indicadores clicáveis
-            indicadores.forEach(indicador => {
-                indicador.addEventListener('clique', () => {
-                    currentIndex = parseInt(indicador.getAttribute('índice de dados'));
-                    atualizarCarrossel();
-                    redefinirAutoSlide();
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = parseInt(indicator.getAttribute('data-index'));
+                    updateCarousel();
+                    resetAutoSlide();
                 });
             });
             
             // Botões de navegação
-            nextButton.addEventListener('clique', () => {
-                próximoSlide();
+            nextButton.addEventListener('click', () => {
+                nextSlide();
             });
             
-            prevButton.addEventListener('clique', () => {
-                anteriorSlide();
+            prevButton.addEventListener('click', () => {
+                prevSlide();
             });
             
             // ===== FUNCIONALIDADE DE ARRASTAR =====
             carouselContainer.addEventListener('mousedown', dragStart);
-            carouselContainer.addEventListener('touchstart', dragStart, { passivo: verdadeiro });
-            carouselContainer.addEventListener('mousemove', arrastar);
+            carouselContainer.addEventListener('touchstart', dragStart, { passive: true });
+            carouselContainer.addEventListener('mousemove', drag);
             carouselContainer.addEventListener('touchmove', drag, { passive: true });
-            carrosselContainer.addEventListener('mouseup', dragEnd);
-            carrosselContainer.addEventListener('mouseleave', dragEnd);
-            carrosselContainer.addEventListener('touchend', dragEnd);
+            carouselContainer.addEventListener('mouseup', dragEnd);
+            carouselContainer.addEventListener('mouseleave', dragEnd);
+            carouselContainer.addEventListener('touchend', dragEnd);
             
             // Pausar auto slide quando o mouse estiver sobre o carrossel
             carouselContainer.addEventListener('mouseenter', stopAutoSlide);
-            carrosselContainer.addEventListener('mouseleave', () => {
-                redefinirAutoSlide();
+            carouselContainer.addEventListener('mouseleave', () => {
+                resetAutoSlide();
             });
             
-            função dragStart(e) {
-                isDragging = verdadeiro;
+            function dragStart(e) {
+                isDragging = true;
                 startX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
-                startScrollLeft = carrossel.scrollLeft;
-                pararAutoSlide();
-                carousel.style.cursor = 'pegando';
-                carousel.style.transition = 'nenhum';
+                startScrollLeft = carousel.scrollLeft;
+                stopAutoSlide();
+                carousel.style.cursor = 'grabbing';
+                carousel.style.transition = 'none';
             }
             
-            função drag(e) {
-                se (!isDragging) retornar;
+            function drag(e) {
+                if (!isDragging) return;
                 e.preventDefault();
                 
                 const x = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
-                const caminhada = (x - startX) * 2;
+                const walk = (x - startX) * 2;
                 
-                se (andar > 50) {
-                    anteriorSlide();
-                    isDragging = falso;
-                    carousel.style.cursor = 'pegar';
-                    carousel.style.transition = 'transformar 0,5s de facilidade';
-                } senão se (andar < -50) {
-                    próximoSlide();
-                    isDragging = falso;
-                    carousel.style.cursor = 'pegar';
-                    carousel.style.transition = 'transformar 0,5s de facilidade';
+                if (walk > 50) {
+                    prevSlide();
+                    isDragging = false;
+                    carousel.style.cursor = 'grab';
+                    carousel.style.transition = 'transform 0.5s ease';
+                } else if (walk < -50) {
+                    nextSlide();
+                    isDragging = false;
+                    carousel.style.cursor = 'grab';
+                    carousel.style.transition = 'transform 0.5s ease';
                 }
             }
             
-            função dragEnd() {
-                isDragging = falso;
-                carousel.style.cursor = 'pegar';
-                carousel.style.transition = 'transformar 0,5s de facilidade';
-                redefinirAutoSlide();
+            function dragEnd() {
+                isDragging = false;
+                carousel.style.cursor = 'grab';
+                carousel.style.transition = 'transform 0.5s ease';
+                resetAutoSlide();
             }
             
             //inicia a apresentação de slides automaticamente
-            iniciarAutoSlide();
+            startAutoSlide();
         }
         
         // ===== MENU MÓVEL ALTERNAR =====
-        função setupMobileMenu() {
+        function setupMobileMenu() {
             const menuToggle = document.querySelector('.menu-toggle');
             const nav = document.querySelector('nav');
             
-            menuToggle.addEventListener('clique', () => {
-                nav.classList.toggle('ativo');
-                menuToggle.classList.toggle('ativo');
-                document.body.style.overflow = nav.classList.contains('ativo') ? 'oculto' : 'automático';
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : 'auto';
             });
         }
         
         // ===== BOTÃO VOLTAR AO TOPO =====
-        função setupBackToTop() {
+        function setupBackToTop() {
             const backToTopButton = document.querySelector('.back-to-top');
             
-            janela.addEventListener('rolagem', () => {
-                se (janela.pageYOffset > 300) {
-                    backToTopButton.classList.add('visível');
-                } outro {
-                    backToTopButton.classList.remove('visível');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
                 }
                 
-                atualizarScrollIndicator();
+                updateScrollIndicator();
             });
             
-            backToTopButton.addEventListener('clique', () => {
-                janela.scrollTo({
-                    topo: 0,
-                    comportamento: 'suave'
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
                 });
             });
         }
         
         // ===== INICIALIZAÇÃO GERAL =====
-        documento.addEventListener('DOMContentLoaded', função() {
+        document.addEventListener('DOMContentLoaded', function() {
             // Inicializar alguns trechos como visíveis
-            document.querySelector('.hero').classList.add('visível');
+            document.querySelector('.hero').classList.add('visible');
             
             // Aplicar correções para Instagram
-            aplicarInstagramFix();
+            applyInstagramFix();
             
             // Configurar funcionalidades
-            configuraçãoSmoothScroll();
-            configuraçãoScrollDots();
+            setupSmoothScroll();
+            setupScrollDots();
             
             //Configura carrossel de serviços
-            setupCarousel('serviços-carrossel', 'serviços-anteriores', 'próximos-serviços', 'serviços-indicadores');
+            setupCarousel('carousel-services', 'prev-services', 'next-services', 'indicators-services');
             
             setupMobileMenu();
-            configuraçãoBackToTop();
+            setupBackToTop();
             
             // Atualizar indicador de rolagem
-            atualizarScrollIndicator();
+            updateScrollIndicator();
         });
         
-        // Altura recalcular do viewport em redimensionamento
-        window.addEventListener('redimensionar', () => {
-            document.querySelectorAll('seção').forEach(seção => {
-                observador.observar(seção);
+        // Altura recalcular da viewport em redimensionamento
+        window.addEventListener('resize', () => {
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
             });
         });
     </script>
-</corpo>
+</body>
 </html>
